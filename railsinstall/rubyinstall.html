@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <title>Trabalhando com animações!</title>
+              <!--<link rel="stylesheet" href="normalize.css">
+              <link rel="stylesheet" href="animacoes.css"> -->
+              <link rel="stylesheet" href="css/teste.css">
+              <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+              <link rel="stylesheet" href="/resources/demos/style.css">
+              <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+              <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                <!-- CSS & fonts -->
+         <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="img/tux.png">
+
+        
+    </head>
+    <body>
+    <!-- Seu html vem aqui -->
+        <script src="jquey.min.js"></script>
+        
+        <div class='container'>
+                    
+            <h2>Install Ruby!</h2>
+                <p><br /><br />
+
+
+
+Seguem os passos para instalar o Rails 4 no Ubuntu. Esse procedimento foi validado no Ubuntu 14.04.
+Atualização do sistema
+
+Abra um terminal e atualize o package-manager do Ubuntu:
+
+sudo apt-get update
+
+E para garantir que a ferramenta curl realmente está instalada:
+
+sudo apt-get install curl
+
+Instalação do RVM
+
+Vamos instalar o Ruby Version Manager (RVM). Ele serve para instalar o Ruby e Ruby Gems.
+
+Primeiro passo e baixar o RVM usando a ferramenta curl. Na linha de comando digite (ou melhor copie e cole):
+
+\curl -L https://get.rvm.io | bash -s stable --ruby
+
+Fique tranquilo se deu erro. Procure na mensagem de erro uma linha que começa com gpg:
+
+Execute essa linha no seu terminal, no meu caso foi a linha abaixo (mas verifique a sua mensagem):
+
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+Isso deve adicionar uma chave para poder baixar o RVM. Vamos tentar de novo, execute novamente (isso pode demorar um pouco):
+
+\curl -L https://get.rvm.io | bash -s stable --ruby
+
+Agora a instalação deve suceder.
+
+Para realmente usar o rvm no seu terminal execute o comando seguinte (substituindo vagrant com o nome seu usuário):
+
+source /home/vagrant/.rvm/scripts/rvm
+
+Agora você já pode utilizar o rvm, por exemplo imprimindo a versão:
+
+rvm -v
+
+Instalação do Ruby
+
+Através do rvm vamos atualizar o mesmo e garantir que a versão mais recente do Ruby está instalada:
+
+rvm get stable --autolibs=enable
+rvm install ruby
+
+Talvez o rvm informa que já instalou a versão atual do Ruby. Agora tente:
+
+ruby -v
+
+No meu caso imprimiu 2.2.1:
+
+Atualização do GEM
+
+Ruby tem o seu próprio package-manager que se chama GEM. Vamos atualizá-lo:
+
+gem update --system
+
+E para ver a versão do package-manager gem você pode executar;
+
+gem -v
+
+No meu caso imprimiu 2.5.1:
+Instalação do Rails
+
+Antes da instalação do Rails devemos garantir que o nodejs está instalado. Para tal execute:
+
+sudo apt-get install nodejs
+
+Você pode testar o nodejs com:
+
+nodejs -v
+
+No treinamento usaremos a versão 4.2.1 do Rails. Para instalar esta versão execute (isso vai demorar um pouco):
+
+gem install rails --version=4.2.1
+
+Depois teste na linha de comando:
+
+rails -v
+
+
+
+         </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <p>
+            Fonte: <a href='http://railsapps.github.io/installrubyonrails-ubuntu.html' target='_blank'>Fonte Git</a>
+        </p>
+    
+    
+            <br />
+            <div class='footer'>
+                    <p>O seu foco, mudara a tecnologia do futuro." </p><br />
+                    <h3 class='tnt'>JES</h3>
+            </div>
+    </body>
+</html>
