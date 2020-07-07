@@ -4,7 +4,7 @@
 
               <meta charset="utf-8">
               <meta name="viewport" content="width=device-width, initial-scale=1">
-              <title>Trabalhando com animações!</title>
+              <title>Install Rails</title>
               <!--<link rel="stylesheet" href="normalize.css">
               <link rel="stylesheet" href="animacoes.css"> -->
               <link rel="stylesheet" href="css/teste.css">
@@ -33,86 +33,88 @@
 
 
 
-Seguem os passos para instalar o Rails 4 no Ubuntu. Esse procedimento foi validado no Ubuntu 14.04.
-Atualização do sistema
+            <p>Seguem os passos para instalar o Rails no Ubuntu. Esse procedimento foi validado no Ubuntu.</p>
+<p>Atualização do sistema</p>
 
-Abra um terminal e atualize o package-manager do Ubuntu:
+<p>Abra um terminal e atualize o package-manager do Ubuntu:</p>
 
-sudo apt-get update
+<p>sudo apt-get update</p>
 
-E para garantir que a ferramenta curl realmente está instalada:
+<p>E para garantir que a ferramenta curl realmente está instalada:</p>
 
-sudo apt-get install curl
+<p>sudo apt-get install curl</p>
+        
+<p>Instalação do RVM</p>
 
-Instalação do RVM
+<p>Vamos instalar o Ruby Version Manager (RVM). Ele serve para instalar o Ruby e Ruby Gems.</p>
 
-Vamos instalar o Ruby Version Manager (RVM). Ele serve para instalar o Ruby e Ruby Gems.
+<p>Primeiro passo e baixar o RVM usando a ferramenta curl. Na linha de comando digite (ou melhor copie e cole):</p>
 
-Primeiro passo e baixar o RVM usando a ferramenta curl. Na linha de comando digite (ou melhor copie e cole):
+<p>\curl -L https://get.rvm.io | bash -s stable --ruby</p>
 
-\curl -L https://get.rvm.io | bash -s stable --ruby
+<p>Fique tranquilo se deu erro. Procure na mensagem de erro uma linha que começa com gpg:</p>
 
-Fique tranquilo se deu erro. Procure na mensagem de erro uma linha que começa com gpg:
+<p>Execute essa linha no seu terminal, no meu caso foi a linha abaixo (mas verifique a sua mensagem):</p>
 
-Execute essa linha no seu terminal, no meu caso foi a linha abaixo (mas verifique a sua mensagem):
+<p> gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</p>
 
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+<p>Isso deve adicionar uma chave para poder baixar o RVM. Vamos tentar de novo, execute novamente (isso pode demorar um pouco):</p>
 
-Isso deve adicionar uma chave para poder baixar o RVM. Vamos tentar de novo, execute novamente (isso pode demorar um pouco):
+<p>\curl -L https://get.rvm.io | bash -s stable --ruby</p>
 
-\curl -L https://get.rvm.io | bash -s stable --ruby
+<p>Agora a instalação deve suceder.</p>
 
-Agora a instalação deve suceder.
+<p>Para realmente usar o rvm no seu terminal execute o comando seguinte:</p>
 
-Para realmente usar o rvm no seu terminal execute o comando seguinte (substituindo vagrant com o nome seu usuário):
+<p>source /home/usuario/.rvm/scripts/rvm</p>
 
-source /home/vagrant/.rvm/scripts/rvm
+<p>Agora você já pode utilizar o rvm, por exemplo imprimindo a versão:</p>
 
-Agora você já pode utilizar o rvm, por exemplo imprimindo a versão:
+<p>rvm -v</p>
 
-rvm -v
+<p>Instalação do Ruby</p>
 
-Instalação do Ruby
+<p>Através do rvm vamos atualizar o mesmo e garantir que a versão mais recente do Ruby está instalada:</p>
 
-Através do rvm vamos atualizar o mesmo e garantir que a versão mais recente do Ruby está instalada:
+<p>rvm get stable --autolibs=enable</p>
+<p>rvm install ruby</p>
 
-rvm get stable --autolibs=enable
-rvm install ruby
+<p>Talvez o rvm informa que já instalou a versão atual do Ruby. Agora tente:</p>
 
-Talvez o rvm informa que já instalou a versão atual do Ruby. Agora tente:
+<p>ruby -v</p>
 
-ruby -v
+<p>No meu caso imprimiu 2.2.1:</p>
 
-No meu caso imprimiu 2.2.1:
+<p>Atualização do GEM
 
-Atualização do GEM
+<p>Ruby tem o seu próprio package-manager que se chama GEM. Vamos atualizá-lo:</p>
 
-Ruby tem o seu próprio package-manager que se chama GEM. Vamos atualizá-lo:
+<p>gem update --system</p>
 
-gem update --system
+<p>E para ver a versão do package-manager gem você pode executar:</p>
 
-E para ver a versão do package-manager gem você pode executar;
+<p>gem -v</p>
 
-gem -v
+<p>No meu caso imprimiu 2.5.1:</p>
+<p>Instalação do Rails</p>
 
-No meu caso imprimiu 2.5.1:
-Instalação do Rails
+<p>Antes da instalação do Rails devemos garantir que o nodejs está instalado. Para tal execute:</p>
 
-Antes da instalação do Rails devemos garantir que o nodejs está instalado. Para tal execute:
+<p>sudo apt-get install nodejs</p>
 
-sudo apt-get install nodejs
+<p>Você pode testar o nodejs com:</p>
 
-Você pode testar o nodejs com:
+<p>nodejs -v</p>
 
-nodejs -v
+<p>No treinamento usaremos a versão 4.2.1 do Rails. Para instalar esta versão execute (isso vai demorar um pouco):</p>
 
-No treinamento usaremos a versão 4.2.1 do Rails. Para instalar esta versão execute (isso vai demorar um pouco):
+<p>gem install rails --version=4.2.1</p>
 
-gem install rails --version=4.2.1
+<p>Depois teste na linha de comando:</p>
 
-Depois teste na linha de comando:
-
-rails -v
+<p>rails -v</p>
+        
+<p>Rails 6.0.3.2</p>
 
 
 
